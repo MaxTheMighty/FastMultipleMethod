@@ -1,0 +1,3 @@
+/Users/maxwell/CLionProjects/N-body-simulation/cmake-build-debug/CMakeFiles/N_body_simulation.dir
+/Users/maxwell/CLionProjects/N-body-simulation/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/maxwell/CLionProjects/N-body-simulation/cmake-build-debug/CMakeFiles/rebuild_cache.dir

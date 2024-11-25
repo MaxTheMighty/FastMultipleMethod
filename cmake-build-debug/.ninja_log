@@ -1,0 +1,10 @@
+# ninja log v6
+0	469	1732497610049033272	CMakeFiles/N_body_simulation.dir/main.cpp.o	1727af505c9acf00
+472	508	1732497610521616281	N_body_simulation	3b21b1f08cfd8b75
+4	58	1732498958469251828	build.ninja	6b9f78356f461172
+5	456	1732498998617341929	CMakeFiles/N_body_simulation.dir/main.cpp.o	70c8aaea41f26d56
+457	559	1732498999069198204	N_body_simulation	3b21b1f08cfd8b75
+5	583	1732499057205457331	CMakeFiles/N_body_simulation.dir/main.cpp.o	70c8aaea41f26d56
+583	674	1732499057783577132	N_body_simulation	3b21b1f08cfd8b75
+4	448	1732499113895239176	CMakeFiles/N_body_simulation.dir/main.cpp.o	70c8aaea41f26d56
+448	484	1732499114339377140	N_body_simulation	3b21b1f08cfd8b75
