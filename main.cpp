@@ -1,30 +1,21 @@
-#include <iostream>
-#include <SDL2/SDL.h>
+#include "canvas.h"
+#include "body.h"
+#include <armadillo>
 
 int main() {
+    int poll_status = 1;
+    int r = 0;
+    Body body1 = Body(arma::vec3({100.0,100.0,100.0}),100.0);
+    Canvas canvas;
+    canvas.init_window("N-body simulation",100,100,500,500);
+    canvas.set_color(255,0,0);
+    canvas.draw_body(body1);
 
-    SDL_Init(SDL_INIT_EVERYTHING);
-    SDL_Window *window = SDL_CreateWindow("N-body simulation",100,100,100,100, SDL_WINDOW_SHOWN);
-    std::cout << SDL_GetError() << std::endl;;
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
-
-
-    SDL_SetRenderDrawColor(renderer, 0,255,0,255);
-
-    SDL_RenderClear(renderer);
-
-    SDL_RenderPresent(renderer);
-
-    SDL_Event e;
-    bool quit = false;
-    while (!quit) {
-        while (SDL_PollEvent(&e)) {
-            if (e.type == SDL_QUIT) {
-                quit = true;
-            }
-        }
+    canvas.show();
+    // main loop
+    while (poll_status != -1) {
+        poll_status = canvas.poll_events();
     }
-
 
     return 0;
 }
