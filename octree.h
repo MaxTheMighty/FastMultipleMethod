@@ -9,6 +9,9 @@
 // Their idea for a base Node class is clever so I am taking it
 // https://github.com/mwarning/SimpleOctree/blob/master/src/Octree.hpp
 //
+
+
+
 class Node
 {};
 
@@ -27,6 +30,10 @@ class Leaf : Node{
 
 
 class Octree {
+  public:
+    Octree();
+
+    Node *children[8];
 
 };
 
