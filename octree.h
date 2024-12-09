@@ -5,36 +5,24 @@
 #ifndef OCTREE_H
 #define OCTREE_H
 #include "body.h"
-//
-// Their idea for a base Node class is clever so I am taking it
-// https://github.com/mwarning/SimpleOctree/blob/master/src/Octree.hpp
-//
-
-
-
-class Node
-{};
-
-class Branch : Node{
-
-  Node *children[8];
-  Branch();
-};
-
-class Leaf : Node{
-  public:
-    std::vector<Body> bodies;
-    Leaf(){}
-    void insert(Body body);
-};
-
+#include "cube.h"
+#include "body.h"
 
 class Octree {
+
+    struct Node {
+        Cube region;
+        std::vector<Body> bodies; //see if we can use a fixed array
+        std::vector<std::unique_ptr<Node>> children; //if we are using pointers, do we play with allocations?
+
+        Node(const Cube &region) : region(region) {}
+    };
+
+
   public:
-    Octree();
-
-    Node *children[8];
-
+    std::unique_ptr<Node> root;
+    explicit Octree(Cube const& dimensions);
+    static void Insert(Body body);
 };
 
 

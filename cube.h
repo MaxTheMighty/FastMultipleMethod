@@ -15,8 +15,12 @@ class Cube {
         arma::vec3 left_top_back_corner;
         arma::vec3 right_bottom_front_corner;
 
-        Cube(arma::vec3 left_top_back_corner, arma::vec3 right_bottom_front_corner);
+        Cube(const arma::vec3 &left_top_back_corner, const arma::vec3 &right_bottom_front_corner);
+        Cube(const arma::vec3 &right_bottom_front_corner);
         bool point_inside(arma::vec3 position);
+
+
+
 };
 
 

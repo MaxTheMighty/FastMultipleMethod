@@ -4,8 +4,13 @@
 
 #include "cube.h"
 
-Cube::Cube(arma::vec3 left_top_back_corner, arma::vec3 right_bottom_front_corner) {
+Cube::Cube(const arma::vec3 &left_top_back_corner, const arma::vec3 &right_bottom_front_corner) {
     this->left_top_back_corner = left_top_back_corner;
+    this->right_bottom_front_corner = right_bottom_front_corner;
+}
+
+Cube::Cube(const arma::vec3 &right_bottom_front_corner) {
+    this->left_top_back_corner = arma::vec3({0.0,0.0,0.0});
     this->right_bottom_front_corner = right_bottom_front_corner;
 }
 
